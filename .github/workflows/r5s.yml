@@ -50,6 +50,8 @@ jobs:
         sudo locale-gen en_US.UTF-8
         sudo DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
         sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
+        sudo -E apt-get -qq install python3-pip
+        sudo -E pip install pyelftools
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
