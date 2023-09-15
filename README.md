@@ -1,4 +1,4 @@
-# Actions-LEDE
+# LEDE-ActionWRT
 - 使用GitHub Actions为X86/R5S构建OpenWrt。
 - R5S版本非常激进。
 - 请确保在使用前，你能接受如断线和崩溃等各种意外情况。
