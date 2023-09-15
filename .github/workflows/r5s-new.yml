@@ -81,6 +81,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds install -a
 
   compilation:
+    needs: preparation
     runs-on: ubuntu-22.04
     steps:
     - name: Load custom configuration
@@ -142,6 +143,7 @@ jobs:
         echo "::set-output name=status::success"
 
   upload:
+    needs: compilation
     runs-on: ubuntu-22.04
     steps:
     - name: Upload firmware directory
@@ -190,6 +192,7 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
   cleanup:
+    needs: upload
     runs-on: ubuntu-22.04
     steps:
     - name: Remove old Releases
