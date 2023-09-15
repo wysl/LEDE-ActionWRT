@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/HEXtoDEC/LEDE
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: SEED/R5S/seed.config
@@ -46,13 +46,6 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo apt-get remove -y '^dotnet-.*'
-        sudo apt-get remove -y '^llvm-.*'
-        sudo apt-get remove -y 'php.*'
-        sudo apt-get remove -y 'temurin-.*'
-        sudo apt-get remove -y 'mono-.*'
-        sudo apt-get remove -y azure-cli google-cloud-sdk hhvm google-chrome-stable firefox powershell microsoft-edge-stable
-        sudo apt-get autoremove -y
         sudo -E apt-get -qq update
         sudo locale-gen en_US.UTF-8
         sudo DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
