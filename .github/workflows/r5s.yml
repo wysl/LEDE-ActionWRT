@@ -88,11 +88,12 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
-    - name: Cache
-      uses: klever1988/cachewrtbuild@main
-      with: 
-        ccache: 'true'
-        prefix: ${{ github.workspace }}/openwrt
+    # 暂时没空处理缓存加速
+    # - name: Cache
+    #   uses: klever1988/cachewrtbuild@main
+    #   with: 
+    #     ccache: 'true'
+    #     prefix: ${{ github.workspace }}/openwrt
 
     - name: Download package
       id: package
