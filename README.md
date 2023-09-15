@@ -1,6 +1,6 @@
 # Actions-LEDE
 - 使用GitHub Actions为X86/R5S构建OpenWrt。
-- R5S版本非常激进（对应immortalwrt的master分支）。
+- R5S版本非常激进。
 - 请确保在使用前，你能接受如断线和崩溃等各种意外情况。
 
 ## 提示
