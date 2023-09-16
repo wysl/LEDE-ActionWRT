@@ -5,7 +5,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/HEXtoDEC/ActionWRT
-# Description: Build OpenWrt for x86/R5S using GitHub Actions
+# Description: Build OpenWrt for R5S using GitHub Actions
 #
 
 name: Build LEDE-R5S
