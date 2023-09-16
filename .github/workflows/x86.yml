@@ -5,7 +5,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/HEXtoDEC/ActionWRT
-# Description: Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions
+# Description: Build OpenWrt for x86/64 using GitHub Actions
 #
 
 name: Build LEDE-X86
