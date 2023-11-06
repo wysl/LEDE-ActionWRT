@@ -2,12 +2,12 @@
 rm -rf lede
 
 # Clone new lede
-git clone https://github.com/coolsnowwolf/lede
+git clone https://github.com/LeXwDeX/LEDE
 cd lede
 
 # Add SSRP
 sed -i "/helloworld/d" "feeds.conf.default"
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+echo "src-git helloworld https://github.com/LeXwDeX/helloworld" >> "feeds.conf.default"
 
 # Update and install feeds
 ./scripts/feeds update -a
