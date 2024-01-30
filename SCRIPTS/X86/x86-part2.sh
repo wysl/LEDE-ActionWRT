@@ -19,10 +19,10 @@
 # rm -rf ./package/lean/passwall_package
 
 # # Openclash
-# git clone -b master --depth=1 https://github.com/vernesong/OpenClash.git ./package/lean/luci-app-openclash
-# mkdir -p ./package/lean/openclash
-# cp -rf ./package/lean/luci-app-openclash/luci-app-openclash/* ./package/lean/openclash
-# rm -rf ./package/lean/luci-app-openclash
+git clone -b master --depth=1 https://github.com/vernesong/OpenClash.git ./package/lean/luci-app-openclash
+mkdir -p ./package/lean/openclash
+cp -rf ./package/lean/luci-app-openclash/luci-app-openclash/* ./package/lean/openclash
+rm -rf ./package/lean/luci-app-openclash
 
 # Mosdns
 # find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
@@ -36,7 +36,7 @@ git clone -b 18.06 --depth=1 https://github.com/jerrykuku/luci-theme-argon.git .
 git clone -b master --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Modify default Hostname
 sed -i 's/OpenWrt/LEDE/g' package/base-files/files/bin/config_generate
